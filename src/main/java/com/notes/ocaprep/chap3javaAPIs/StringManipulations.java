@@ -1,4 +1,4 @@
-package com.notes.ocaprep;
+package com.notes.ocaprep.chap3javaAPIs;
 
 public class StringManipulations {
 
