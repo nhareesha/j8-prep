@@ -55,14 +55,21 @@ public class StringManipulations {
 		//it returns a new string , where end index is excluded
 		s6.substring(3, 4); //here e is the result , but it is ignored as it is not stored
 		s6.substring(3,3);//return empty string
-		s6.substring(3,2);//throws exception
+		//s6.substring(3,2);//throws exception
 		
 		//startsWith(str), endsWith(str) , contains(str) these menthods accept only string arg and return boolean 
 		
-		//s6.contains('a'); illegal.... coz contains() accepts string argument
+		//s6.contains('a'); illegal.... coz contains() method accepts string argument
 		
+		//trim() method returns string , it trims white space at the front and at the end.
+		//It also removes any \t ,\n , \r
+		s6.trim();
 		
+		//replace() does a simple search and replace on the string, accepts char or string sequence
 		
+		//method chaining can be done on strings
+		String s7 = "AnimaL ".trim().replace("a", "A");//replace('a','A') is also valid
+		System.out.println(s7);
 		
 	}
 
