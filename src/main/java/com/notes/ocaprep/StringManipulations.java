@@ -45,6 +45,23 @@ public class StringManipulations {
 		//String s6 =false;
 		//String s6 = 2.1f;
 		
+		//charAt(int index) returns char at the given index
+		
+		//indexOf function accepts char ,string and also fromIndex.It returns -1 if not found
+		String s6 = "Hareesha";
+		System.out.println(s6.indexOf('n'));//returns -1
+		
+		//substring(start , end) or just start
+		//it returns a new string , where end index is excluded
+		s6.substring(3, 4); //here e is the result , but it is ignored as it is not stored
+		s6.substring(3,3);//return empty string
+		s6.substring(3,2);//throws exception
+		
+		//startsWith(str), endsWith(str) , contains(str) these menthods accept only string arg and return boolean 
+		
+		//s6.contains('a'); illegal.... coz contains() accepts string argument
+		
+		
 		
 		
 	}
