@@ -46,10 +46,6 @@ public class StringBuilderNotes {
 		
 		//String and StringBuilder cannot be compared and cannot be assigned 
 		
-		
-		
-		
-		
 	}
 
 }
