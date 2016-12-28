@@ -57,7 +57,7 @@ public class StringManipulations {
 		s6.substring(3,3);//return empty string
 		//s6.substring(3,2);//throws exception
 		
-		//startsWith(str), endsWith(str) , contains(str) these menthods accept only string arg and return boolean 
+		//startsWith(str), endsWith(str) , contains(str) these methods accept only string arg and return boolean 
 		
 		//s6.contains('a'); illegal.... coz contains() method accepts string argument
 		
