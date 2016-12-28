@@ -3,7 +3,7 @@ package com.notes.ocaprep.chap3javaAPIs;
 public class StringBuilderNotes {
 
 	public static void main(String[] args) {
-		// StringBuilder is mutable
+		// StringBuilder is mutable and NOT thread safe
 		
 		StringBuilder sb1 = new StringBuilder();
 		StringBuilder sb2 = new StringBuilder("animal");
