@@ -2,6 +2,7 @@ package com.notes.ocaprep.chap3javaAPIs;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ArrayListsNotes {
@@ -62,31 +63,48 @@ public class ArrayListsNotes {
 		System.out.println(one.equals(two));//true ,its empty list , and ArrayList overridden equals() to check contents
 		
 		
-		/*** conversion between Arrays and Lists ***/
+		/*** conversion from Arrays to ArrayLists ***/
 		
 		String[] s1 = new String[]{"Hello","Hi","how are u"};
 		
-		//Arrays.asList() is used to convert an array to ArrayList.asList is a static method
-		//it returns List interface
+		//Arrays.asList() is used to convert an array to ArrayList.asList() is a static method, it returns List interface
 		
 		//ArrayList<String> a1 = (ArrayList<String>) Arrays.asList(s1);
 		
 		List<String> a1 = Arrays.asList(s1);
 		
-		//Created ArrayList and array are linked.And arrayList is fixed.If any operation are
-		//performed to change the size of arrayList that is created from array returns in Exception
+		/* s1.asList();//ILLEGAL!! There is no method as asList in arrays. */
+		
+		//Created ArrayList and array are linked. And created arrayList is fixed.If any operation are
+		//performed to change the size of arrayList that is created from array throws an Exception
 		
 		//set() made on arrayList and any operations on array are linked.
 		
 		a1.set(0, "Welcome");//replaces 1st element of arrayList
 		
+		System.out.println(s1[0]); // Welcome , becuase array and arrayBacked list are connected
 		
+		s1[1] = "array-change";
 		
+		System.out.println(a1.get(1)); //array-change , because array and arrayList are linked
 		
+		//a1.remove(0);// throws UnsupportedOperationException , because ArrayList created from array is fixed
 		
-		//s1.asList();//ILLEGAL!! There is no method as asList in arrays .
-		
+		/*** conversion from ArrayList to Array ***/
 		ArrayList<String> l4 = new ArrayList<String>();
+		l4.add("one");
+		l4.add("two");
+		l4.add("three");
+		l4.add("four");
+		//List has a method toArray() which converts ArrayList to Array of objects by default
+		
+		Object[] objArr = l4.toArray();
+		String[] strArr = l4.toArray(new String[0]); //returns an Object array by default
+		
+		//Sorting ArrayList needs Collections.sort() method
+		Collections.sort(l4);
+		System.out.println(l4);
+		
 		
 		
 		
