@@ -24,7 +24,7 @@ public class WrapperClassesNotes {
 		
 		List<Float> f1 = new ArrayList<>();
 		f1.add(2.1f);//float autoboxed to Float 
-		f1.add(null);//when autoboxing on null is performed to convert to Float , NullPointer Exception is received
+		/* f1.add(null);//when autoboxing on null is performed to convert to Float , NullPointer Exception is received */
 	}
 
 }
