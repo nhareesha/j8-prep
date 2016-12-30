@@ -9,12 +9,23 @@ public class VarAargsNotes {
 		obj.test(2,3,4,5);// here 2 is 1st parameter and {3,4,5} forms the second parameter array
 		
 		//we cannot pass null .It throws NullPointerException
-		obj.test(1,null);
+		
+		//obj.test(1,null);
+		
+		//for varargs any array can be passed .
+		obj.test(1,new int[]{1,2,3});
 		
 	}
 	
+	//there cannot be two overloaded methods with same type of varargs and array
 	
+	//because internally compiles converts varrags into array and they are potentially the same
+	
+	/*
 	public void test1(int... nums){}
+	
+	public void test1(int[] arr){}
+	*/
 	
 	/* var args need to ve last in the argument list  */
 	public void test2(String str , int... nums){}
