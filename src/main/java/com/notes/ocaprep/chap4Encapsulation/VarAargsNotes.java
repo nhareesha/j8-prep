@@ -19,7 +19,7 @@ public class VarAargsNotes {
 	
 	//there cannot be two overloaded methods with same type of varargs and array
 	
-	//because internally compiles converts varrags into array and they are potentially the same
+	//because internally compiler converts varrags into array and they are potentially the same
 	
 	/*
 	public void test1(int... nums){}
