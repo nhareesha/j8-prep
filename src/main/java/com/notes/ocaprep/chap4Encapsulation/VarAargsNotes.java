@@ -27,7 +27,7 @@ public class VarAargsNotes {
 	public void test1(int[] arr){}
 	*/
 	
-	/* var args need to ve last in the argument list  */
+	/* var args need to be last in the argument list  */
 	public void test2(String str , int... nums){}
 	
 	/* DO NOT COMPILE . Because a method cannot have more than one varargs parameter */
