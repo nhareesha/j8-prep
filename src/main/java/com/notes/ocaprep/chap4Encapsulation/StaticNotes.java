@@ -10,7 +10,7 @@ package com.notes.ocaprep.chap4Encapsulation;
 public class StaticNotes {
 
 	/*	
-	 * 									RULES:
+	 * 						Static Vs Instance			RULES:
 	 * 
 		1. Static members do not require instance to get accessed
 		
@@ -35,7 +35,13 @@ public class StaticNotes {
 			a reference variable
 			
 		11. Instance method can call instance method or instance variable using reference variable or 
-		    directly if they are in same class
+		    directly if they are in same class.
+		    
+		12. Static Initializers are used , so that any static variables can be initialized.
+		
+		13. Static variables can be initialized as many times as we want.It can be 
+		    initilized in line of declaration , static block ,  constructor.
+		
 		
 	 */
 	
@@ -44,24 +50,22 @@ public class StaticNotes {
 	
 	private int num = 3;
 	
-	 // private static int number = count+num ; DOES NOT COMPILE !!!! cannot access instance varible in static
+	 // private static int number = count+num ; DOES NOT COMPILE !!!! cannot access instance variable in static
 	
+	
+	/* static block */
 	static{
-		count = 1;
+		count = 1; //static variable
 	}
 	
-	public static void main(String[] args) {
-		
-		StaticNotes obj  = new StaticNotes();
-		obj.instanceFun();
-		StaticNotes.staticFun();
-		
+	public StaticNotes(){
+		count=0;
 	}
 	
 	/* static method */
 	public static void staticFun(){
 		
-		count++; //static variable is allowed in static method
+		count=count+1; //static variable is allowed in static method
 		
 		// System.out.println(exam); DOES NOT COMPILE !!! . Cannot access instance variables or methods
 		
@@ -91,6 +95,14 @@ public class StaticNotes {
 						// reference type.So it will not give NullPointerException !!!!
 		
 		 // obj.instanceFun(); // this will give NullPointerException , since the method called is instance method
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		StaticNotes obj  = new StaticNotes();
+		obj.instanceFun();
+		StaticNotes.staticFun();
 		
 	}
 
