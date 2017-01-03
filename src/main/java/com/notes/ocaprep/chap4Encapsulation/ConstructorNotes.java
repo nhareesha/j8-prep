@@ -30,15 +30,22 @@ public class ConstructorNotes {
 	  	*					Overloading Constructors
 	  	*
 	  	
-	  		1. 
-	  
-	  
-	  
+	  		1. A class can have any number of constructors ,  as long as they have different parameter list
+	  		   in order to be overloaded.
+	  		   
+	  		2. A constructor can call another constructor with the help of this().
+	  		
+	  		3. this() must be first non commented statement in the constructor.This is called constructor chaining
+	  		
+	  		4. 
 	  
 	 */
 	
 	private int len;
 	private int wid;
+	private int height;
+	private double inc;
+	private int level;
 	
 	
 	public ConstructorNotes(){} //default constructor
@@ -51,8 +58,27 @@ public class ConstructorNotes {
 	//public constructorNotes(){} //IN VALID !!! constructor name needs to be same as class name 
 								// java thinks it is a method now and return type is missing
 	
+	public ConstructorNotes(int len){
+		
+		//System.out.println("Constructor - not allowed here - before this");
+		this(len , 10,20);
+	}
 	
+	public ConstructorNotes(int len, int wid , int height){
+		this(len,wid,height,2);
+	}
 	
+	public ConstructorNotes(int len, int wid , int height , double inc){
+		this.len = len;
+		this.wid = wid;
+		this.height = height;
+		this.inc = inc;
+		new ConstructorNotes(len,wid,height,inc,3);//this compiles but ignores current obj an creates
+	}
+	
+	public ConstructorNotes(int len, int wid , int height , double inc , int level){
+		
+	}
 	
 	
 	public static void main(String[] args) {
