@@ -19,7 +19,17 @@ public class AccessModifiers {
 	 		4. default: It is not a keyword , but when  a method do not have any access specifier ,
 	 			then it is default scope.The classes in the same package can access it.
 
-
+		Rules for protected members access
+		
+		1. They are accessible in same class , same package.
+		
+		2. They are accessible in sub class, without reference
+		
+		3. If protected members are accessed using reference variable , then that 
+			
+			reference variable type must be subclass(same or difference package) 
+			
+			or it must be in same package as that of protected members
 
 
 
@@ -28,9 +38,11 @@ public class AccessModifiers {
 	
 	private String noise = "quack";
 	
-	public String nature = "public";
-	
 	String dflt = "default"; //No access modifier means , default access modifier or package private
+
+	protected String value = "protected";
+
+	public String nature = "public";
 	
 	
 	private String getSound(){
@@ -47,12 +59,16 @@ public class AccessModifiers {
 		
 		System.out.println(o.dflt); //same class - default modifier
 		
+		System.out.println(o.value); //Available - value has protected modifier - access from same class 
+		
 		AnotherClass i = new AnotherClass();
 		i.test();
 	}
 	
 	private void test(){
 		getSound(); // allowed since getSound() is private and it is being accessed from same class
+		
+		System.out.println(value); //being accessed from same class
 	}
 
 }
@@ -67,6 +83,9 @@ class AnotherClass{
 		System.out.println("Another class - same package "+obj.nature);// VALID !!! since nature is public variable of the class
 		
 		System.out.println("Another class - same package "+obj.dflt); //VALID !!! default modifier
+		
+		System.out.println(obj.value); // Available -- value has protected modifier
+									  // AnotherClass belong to same package as AccessModifier class
 	}
 	
 }
