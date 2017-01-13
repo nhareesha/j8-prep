@@ -58,6 +58,18 @@ public class MethodOverriding extends ParentThree{
 	   	(method hiding)
 	   	Likewise, if method must not be marked as static in child class, if it is not marked as
 	   	static in parent class(method overriding)
+	   	
+	Overriding Vs Hiding:
+		
+		1. If overridden method is called using super class reference, then that method is replaced
+			at runtime in the parent class with the child class method
+			
+			If the static method is in child class and parent class , then parent class static method is
+			not visible in child class.So only parent class version is called.
+			
+	final methods:
+		
+		1. methods marked as final cannot be overriden in subclasses.
 		
 	 */
 	
@@ -80,9 +92,33 @@ public class MethodOverriding extends ParentThree{
 	protected String methodFive(){return null;}//VALID!!! because every object is subtype of Object
 	
 	
-	private void privateMethodOne(){}//VALID !! because parent method is not visible here
+	private void privateMethodOne(){}//VALID !! because parent class private method is not visible here
 	
 	protected void privateMethodTwo(){}//VALID !! because parent methods are not visible in child
+	
+	//protected  void staticInChild(){}// COMPILER ERROR!! child class should also have static keyword
+	//static void staticInChild(){}// COMPILER ERROR!! method hiding cannot reduce the visibility than parent class
+	
+	public static void staticInChild(){}// VALID!! child class can be even more accessible
+	
+	protected void overrideMethodOne(){
+		System.out.println("OverrideMethodOne - child class");
+	}
+	
+	protected static  void methodHide(){
+		System.out.println("methodHide - Child class");
+	}
+	
+	//protected final static void finalMethod(){}// COMPILER ERROR!! cannot override final method
+	
+	public static void main(String... args){
+		
+		MethodOverriding obj = new MethodOverriding();
+		obj.methodHide(); // this calls the child class method only
+		
+		obj.overrideMethodOne();
+	
+	}
 }
 
 class ParentThree{
@@ -97,7 +133,21 @@ class ParentThree{
 	
 	protected Object methodFive(){return null;}
 	
+	
 	private void privateMethodOne(){}
 	
 	private void privateMethodTwo(){}
+	
+	protected static void staticInChild(){}
+	
+	
+	protected void overrideMethodOne(){
+		System.out.println("OverrideMethodOne - Parent class");
+	}
+	
+	protected static  void methodHide(){
+		System.out.println("methodHide - Parent class");
+	}
+	
+	protected final static void finalMethod(){}
 }
