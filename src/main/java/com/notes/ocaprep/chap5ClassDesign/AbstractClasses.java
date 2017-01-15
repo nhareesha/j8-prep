@@ -15,9 +15,9 @@ public abstract class AbstractClasses extends abstractClassTwo {
 	 1. Abstract class cannot be instantiated directly
 	 
 	 2. Abstract class can have any number of abstract and non abstract methods.It can also 
-	 	have zerro of abstract and non- abstract methods.
+	 	have zero of abstract and non- abstract methods.
 	 	
-	 3. An abstract class cannot be marked as private or final.
+	 3. An abstract class cannot be marked as private or final or protected(to level classes are not allowed to have this).
 	 
 	 4. An abstract class that extends another abstract class also inherits all of the abstract methods 
 	 	as it own abstract methods.And it is not required to provide implementation of inherited methods.
