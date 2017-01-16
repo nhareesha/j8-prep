@@ -65,7 +65,10 @@ public class InterfacesNotes {
 	 
 	 Interface Variables
 	 
-	 	1. 
+	 	1. Interface variables are assumed to be public , static , final .Making a variable
+	 		private, protected or abstract will trigger a compiler error.
+	 		
+	 	2. Value of Interface variables must be set when it is declared , since it is marked as final.
 	 
 	 */
 	
@@ -73,6 +76,11 @@ public class InterfacesNotes {
 }
 
 interface Test{
+	int HEIGHT = 30;//here public final and static are assumed
+	
+	static int LENGTH=10; //public and final assumed
+	
+	//int WEIGHT;//COMPILER ERROR!!! because final variables need to be initialized when it is declared.
 	
 	void methodOne();//here abstract and public are assumed
 	
