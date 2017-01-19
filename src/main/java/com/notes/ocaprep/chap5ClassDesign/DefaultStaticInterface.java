@@ -41,7 +41,13 @@ public class DefaultStaticInterface {
 			for method overriding
 			
 		3. the interface may redeclare the default method as abstract, requiring classes that 
-			implements need to provide the implementation.		
+			implements need to provide the implementation.
+			
+	When a class implements two interfaces that has same default methods
+	
+		The implemention class should override the DULICATE default method, or else it throws a COMPILER ERROR.
+		
+		
 	 
 	 */
 	
@@ -52,25 +58,35 @@ interface DefaultOne{
 	
 		//public  void firstDefault(){}//COMPILER ERROR!!non abstract method needs to be either static or default
 		
-		void firstDefault();//Valid!! public and abstract are assumed.
+		//void firstDefault();//Valid!! public and abstract are assumed.
 		
 		default void secondDefault(){
 			System.out.println("");
 		}
 		
 		default void thirdDefault(){}
+		
+		default void fourthDefault(){}
 }
 
 interface DefaultTwo extends DefaultOne{
 	
-	default void firstDefault(){
-		
-	}
+	default void firstDefault(){}
 	
 	default void secondDefault(){
 		System.out.println("This overriden");
 	}
 	
 	void thirdDefault(); // this is made abstract
+	
+}
 
+interface DefaultThree{
+	default void fourthDefault(){}//same default method
+}
+
+//class DupDefaultMethod implements DefaultOne, DefaultThree {}//COMPILER ERROR
+
+class DupDefaultMethod implements DefaultOne, DefaultThree {
+	public void fourthDefault(){} //Forced to override the dulicate default method from the two interfaces
 }
