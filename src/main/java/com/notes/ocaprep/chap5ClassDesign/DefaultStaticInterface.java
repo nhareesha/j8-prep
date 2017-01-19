@@ -47,7 +47,7 @@ public class DefaultStaticInterface {
 	
 }
 
-interface Default{
+interface DefaultOne{
 		//public default void firstDefault();//COMILER ERROR!! default method needs body
 	
 		//public  void firstDefault(){}//COMPILER ERROR!!non abstract method needs to be either static or default
@@ -57,4 +57,20 @@ interface Default{
 		default void secondDefault(){
 			System.out.println("");
 		}
+		
+		default void thirdDefault(){}
+}
+
+interface DefaultTwo extends DefaultOne{
+	
+	default void firstDefault(){
+		
+	}
+	
+	default void secondDefault(){
+		System.out.println("This overriden");
+	}
+	
+	void thirdDefault(); // this is made abstract
+
 }
