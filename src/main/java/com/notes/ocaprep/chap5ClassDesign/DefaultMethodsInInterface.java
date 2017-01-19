@@ -3,7 +3,7 @@ package com.notes.ocaprep.chap5ClassDesign;
  * @author Hareesha
  * Jan 16, 2017
  */
-public class DefaultStaticInterface {
+public class DefaultMethodsInInterface {
 
 	/**
 	 Default Methods:
