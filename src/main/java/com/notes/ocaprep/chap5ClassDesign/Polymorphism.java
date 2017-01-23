@@ -66,10 +66,9 @@ package com.notes.ocaprep.chap5ClassDesign;
 		//Throws ClassCastException
 		
 		//as rodent is not instancecOf Polymorphism
-		//Polymorphism obj = (Polymorphism) rodent;//Object being cast here is Rodent, it not the instance
-												//Polymorphism class
+		//Polymorphism obj = (Polymorphism) rodent;
 		
-		System.out.println(i);
+		//Object being cast here is rodent, it not the instanceOf Polymorphism class
 	}
 
 }
