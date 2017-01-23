@@ -47,7 +47,7 @@ public class MethodOverriding extends ParentThree{
 			
 	Hiding static methods:
 	
-		Methods are said to be hidden, if child class defines a static methods withsame name and
+		Methods are said to be hidden, if child class defines a static methods with same name and
 		signature as static method as defined in parent class.
 		
 	Rules For Method Hiding:
