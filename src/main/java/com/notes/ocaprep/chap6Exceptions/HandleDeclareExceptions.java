@@ -44,6 +44,48 @@ public class HandleDeclareExceptions {
 	 	fewer exceptions or no new Checked Exceptions in the overridden method.
 	 	This applies only to CHECKED EXCEPTIONS.
 	 
+	 Printing an Exception
+	 
+	 1. e
+	 
+	 2. e.getMessage();
+	 
+	 3. e.printStackTrace();
+	 
+	 Common runtime Exceptions
+	 
+	 	1. ArithmeticException
+	 	
+	 	2. ArrayIndexOutOfBoundException
+	 	
+	 	3. ClassCastException
+	 	
+	 	4. IllegalArgumentException
+	 	
+	 	5. NumberFormatException
+	 	
+	 	6. NullPointerException
+	 
+	 
+	 NumberFormatException is subclass of IllegalArgumentException and these are thrown by programmer
+	 
+	 Rest of all the RumtimeExceptions are thrown by JVM.
+	 
+	 Common Checked Exceptions
+	 
+	 	1. IOException
+	 	
+	 	2. FileNotFoundException
+	 	
+	 FileNotFoundException is subclass of IOException and is thrown by programmer and are anticipated
+	 
+	 Common Errors
+	 
+	 	1. ExceptionInitializationError
+	 	
+	 	2. StackOverflowError
+	 	
+	 	3. NoClassDefFoundError
 	 
 	 */
 	public static void main(String[] args) throws IOException {
@@ -85,9 +127,16 @@ public class HandleDeclareExceptions {
 		
 		try{
 			System.out.println("Try-block");
-			throw new Exception();
+			throw new Exception("Hello I am an Exception from try block");
 		}catch(Exception e){
 			System.out.println("Catch-block");
+			
+			
+			System.out.println(e);
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+			
+			
 			throw new IOException("I am a Exception in Catch block");
 			//this is never printed, as it is forgotten by compiler because finally has thrown an 
 			//Exception , which ultimately will be printed
