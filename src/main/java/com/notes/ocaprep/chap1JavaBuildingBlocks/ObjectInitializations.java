@@ -93,6 +93,12 @@ public class ObjectInitializations {
 	
 	long f = 2147483647;
 	
+	double g = 1_2_3.4;//Valid
+	
+	//double h = _1; COMPILER ERROR!! _ cannot be present at the start 
+	
+	//double h = 1_._2_; COMPILER ERROR!!
+	
 	public ObjectInitializations(){
 		val = 40; // 3 as last, constructor runs at last 
 	}
