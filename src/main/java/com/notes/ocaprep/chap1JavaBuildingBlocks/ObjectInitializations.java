@@ -20,12 +20,13 @@ public class ObjectInitializations {
 			
 		2. Constructors are run after all the fields and initializer blocks have run.
 	
-	Primitive types: 8 primitive types
+	Primitive types: Primitive type that holds the value in the memory where the variable is allocated.
+	There are 8 primitive types
 	
 		1. float[ 32 bit decimal value ]. Floating point requires "f" following the number so java knows 
 			it is floating point. ( Like 2 to the power of 32 ). 123.10f
 		
-		2. double[ 64 - bit decimal ]. ( Like 2 to the power of 64 )
+		2. double[ 64 - bit decimal ]. ( Like 2 to the power of 64 ) 123, 123d ,123f
 		
 		3. byte [ 8 - bit integer value ] ( Like 2 to the power of 8 )
 		
@@ -57,11 +58,28 @@ public class ObjectInitializations {
 	3. Another feature is , numeric literal can have underscore in the number any where,
 	 	EXCEPT at begin of literal , end of literal , right before decimal , right after decimal
 	
+	Reference Type :
+	
+	1. The reference type refers to an Object.Reference type do not store value of object, but it
+		stores the memory location of where the object is stored on the heap.
+		
+	2. Refernece type can be assigned null, which means they do not currently refer to any object.
+	
+	3. If we assign a null to primitive type , then it is a COMPILER ERROR.
+	
+	4.Reference type will have both state and behaviour., primitive do not have behaviour.
+	
+	5. An object in the heap memory can only be accessed using a reference that is on stack.
+	
+	
+	
 	Casting: 
 	
 		1. byte , short, int , long , float , double  is the order
 		
-		2. When ever decimal literal is assigned to float, it should be folloed by "f"
+		2. When ever decimal literal is assigned to float, it should be followed by "f".
+		
+		3. smaller data types can be assigned to bigger data types, because small can fit in big.
 	
 	 */
 	
@@ -78,7 +96,6 @@ public class ObjectInitializations {
 	
 	String j = "Hello";
 	
-	
 	int a = 21474;
 	
 	//int b = -3291231231;//COMPILER ERROR!! it is over int min val
@@ -91,6 +108,10 @@ public class ObjectInitializations {
 	
 	double e = 123.4;
 	
+	double k = 21d;//VALID!!
+	
+	double l = 12f;//VALID!! float can be assigned to double
+	
 	long f = 2147483647;
 	
 	double g = 1_2_3.4;//Valid
@@ -98,6 +119,9 @@ public class ObjectInitializations {
 	//double h = _1; COMPILER ERROR!! _ cannot be present at the start 
 	
 	//double h = 1_._2_; COMPILER ERROR!!
+	
+	//int i= null;//COMPILER ERROR!! Cannot convert from null to int
+	
 	
 	public ObjectInitializations(){
 		val = 40; // 3 as last, constructor runs at last 
