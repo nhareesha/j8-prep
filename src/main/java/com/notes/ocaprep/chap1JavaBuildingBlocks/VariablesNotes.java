@@ -62,7 +62,11 @@ public class VariablesNotes {
 	 		
 	 		any object - null
 	 		
-	 	4. Ordering of element in file PIC[ Package , Import , Class ]
+	 	4. Ordering of element in file PIC[ Package , Import , Class ].
+	 	
+	 	5. Class variables remain in scope as long as the program is running.
+	 	
+	 	6. Instance variables goes out of scope when the object is garbage collected.
 	 	
 	 Compiling And Executing java program:
 	 
