@@ -63,6 +63,14 @@ public class VariablesNotes {
 	 		any object - null
 	 		
 	 	4. Ordering of element in file PIC[ Package , Import , Class ]
+	 	
+	 Compiling And Executing java program:
+	 
+	 	1. javac compiles a .java file into .class file
+	 	
+	 	2. For execution "java classname without .class extension"
+	 	
+	 	2. When passing paramets from cmd line , java fileName arg1 arg2 "arg3 of two words" 
 	 	 	
 	 */
 	
