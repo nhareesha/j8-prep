@@ -52,6 +52,8 @@ public class GarbageCollection {
 			method is not called again.
 		
 		4. finalize() method is not definitely called twice on a object.
+		
+		5. finalize() method is not gauranteed to run. System.gc()is also not gaurenteed to run.
 	
 	 */
 	public static void main(String[] args) {

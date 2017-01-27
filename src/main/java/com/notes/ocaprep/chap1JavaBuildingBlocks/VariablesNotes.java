@@ -47,7 +47,7 @@ public class VariablesNotes {
 	 	 
 	 	Instance and Class(static) Variables:
 	 	
-	 	1. Instance and Static variables do not require you to initialize them.
+	 	1. Instance and Static variables DO NOT require you to initialize them.
 	 	
 	 	2. Inastance and class variables get the default values as soon as they are declared.
 	 	
