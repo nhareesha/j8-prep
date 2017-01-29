@@ -84,6 +84,20 @@ public class OperatorPrecedence {
 		System.out.println(b);
 		
 		//Numeric Promotion
+		
+		short s1 = 12;
+		short s2 = 11;
+		
+		//short i1 =s1+s2;//this is compilation error , because due to numeric promotion 
+						//short is first converted to int and the result would also
+						//be of int type
+		
+		int i1 = s1 + s2 ; //valid , short converts to int and result is int
+		
+		//float f1 = 1.2; //Invalid , by default the decomalvalue is assumed to be deimal unless
+						//followed by f
+		
+		
 	}
 
 }
