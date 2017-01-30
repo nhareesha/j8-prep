@@ -16,9 +16,9 @@ public class OperatorPrecedence {
 	 
 	 precedence: Order High to Low
 	 	
-	 	Post Unary Operator:   exp++ , exp--
+	 	Post Unary Operator,Pre Unary Operator:   exp++ , exp--  ++exp , --exp
 	 	
-	 	Pre Unary Operator: ++exp , --exp
+	 	They have the precedence in the order which they appear in the expression
 	 	
 	 	Other Unary Operators : + - !
 	 	
@@ -58,7 +58,7 @@ public class OperatorPrecedence {
 	 	2. If one of the value is intergral and other is floating point, Java automatically promotes
 	 		the integral value to the floating-point value data type.
 	 		
-	 	3. Smaller data types namely byte, short, char are first converted to "int" at anytime theya re
+	 	3. Smaller data types namely "byte, short, char" are first converted to "int" at anytime theya are
 	 		used with binary arithmetic operator, even if neither of the operator is int.
 	 		
 	 	4. After all numeric promotion has occurred and the operands have the same type, the resulting
@@ -68,7 +68,16 @@ public class OperatorPrecedence {
 	
 	1. The default value of float and double that will be printed is 0.0.
 	 		Ex : float a = 3;System.out.println(a);//3.0
-	 		
+	 
+	 Unary Operators :
+	 	
+	 	1. +(indicates the number is positive), -(indicates the number is negative)
+	 	
+	 	2. ++a,--a  [operator is applied first and new value is returned to the expression]
+	 	
+	 	3. a++,a-- [Original value of expression is calculted first and returned and then after operator is applied.
+	 	
+	 	 
 	 
 	 */
 	public static void main(String[] args) {
@@ -120,6 +129,33 @@ public class OperatorPrecedence {
 		char c2 = 90;
 		System.out.println(d2+c2);//93.0
 		
+		
+		//Unary Operator - Pre and Post increment and decrement operators
+		
+		int counter = 0;
+		
+		System.out.println(++counter);// 1
+		System.out.println(counter); // 1
+		
+		counter = 2 ;
+		System.out.println(counter++);// 2 - Expression is evaluated first returned
+									//and then the value is calculated
+		
+		System.out.println(counter); // 3 - its show the updated value
+		
+		
+		int x = 3;
+		
+		int y = ++x * 5/x-- + --x;
+		//x = 4
+		//4*5/4+2
+		//20/4+2
+		//5+2 --> 7 
+		
+		// the final value of the x is 2
+		
+		System.out.println(x);//2
+		System.out.println(y);//7
 		
 		
 	}
