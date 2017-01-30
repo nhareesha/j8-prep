@@ -64,6 +64,11 @@ public class OperatorPrecedence {
 	 	4. After all numeric promotion has occurred and the operands have the same type, the resulting
 	 		value will have the same data type as its promoted operands.
 	 
+	Note:  
+	
+	1. The default value of float and double that will be printed is 0.0.
+	 		Ex : float a = 3;System.out.println(a);//3.0
+	 		
 	 
 	 */
 	public static void main(String[] args) {
@@ -96,6 +101,25 @@ public class OperatorPrecedence {
 		
 		//float f1 = 1.2; //Invalid , by default the decomalvalue is assumed to be deimal unless
 						//followed by f
+		
+		float f1 = 2;
+		float f2 = 3 ;
+		
+		float f3 = f1+ f2; //here same data type
+		System.out.println(f3);
+		
+		char c1 = 11;
+		short s4 = 22;
+		float f4 = c1 + s4;//bye, short , char are converted to int when used with binary operator
+		System.out.println(f4);
+		
+		double d1 = 2;
+		System.out.println(d1); //2.0
+		
+		double d2 = 3;
+		char c2 = 90;
+		System.out.println(d2+c2);//93.0
+		
 		
 		
 	}
