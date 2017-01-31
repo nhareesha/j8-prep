@@ -3,11 +3,13 @@
  */
 package com.notes.ocaprep.chap2OperatorsAndStatements;
 
+import com.notes.ocaprep.chap4Encapsulation.test.Test;
+
 /**
  * @author Hareesha
  * Jan 29, 2017
  */
-public class CastingPrimitiveValues {
+public class CastingPrimitiveValues extends Test {
 
 	/**
 	 
@@ -41,6 +43,12 @@ public class CastingPrimitiveValues {
 		short s5 = (short)(s3+s4);
 		
 		
+		
 	}
-
+	public void print(){
+		int y = 10;
+		Test t= new Test();
+		System.out.println(t.y+t);
+		
+	}
 }
