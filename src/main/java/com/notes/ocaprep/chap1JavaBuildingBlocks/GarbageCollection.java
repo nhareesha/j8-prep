@@ -51,7 +51,7 @@ public class GarbageCollection {
 		3. If garbage collector fails to collect the object and tries to run again , this finalize()
 			method is not called again.
 		
-		4. finalize() method is not definitely called twice on a object.
+		4. finalize() method is not definitely called twice on a object.It is run zero or one time.
 		
 		5. finalize() method is not gauranteed to run. System.gc()is also not gaurenteed to run.
 	
