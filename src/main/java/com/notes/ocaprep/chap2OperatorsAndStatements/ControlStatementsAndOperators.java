@@ -3,6 +3,8 @@
  */
 package com.notes.ocaprep.chap2OperatorsAndStatements;
 
+import java.io.File;
+
 /**
  * @author Hareesha
  * Feb 1, 2017
@@ -104,6 +106,15 @@ public class ControlStatementsAndOperators {
 		
 		if(a1==a2){
 			System.out.println("Numeric promotion applied");
+		}
+		
+		File x1 = new File("hello.txt");
+		File x2 = new File("hello.txt");
+		
+		if(x1 == x2){
+			System.out.println("Object are equal, as the references point to same obj on heap");
+		}else{
+			System.out.println("references point to different objects on the heap");
 		}
 	}
 
