@@ -63,7 +63,14 @@ public class ControlStatementsAndOperators {
 	  		4. Comparing two objects, equaliy operator is applied to the references to the objects,
 	  			Two reference are equal if any only if they point to same object on the heap.
 	  			References store the address of the object that is present on the heap.
-	
+		
+		Logical Operator :
+		
+			1. AND - ( & ) - TRUE if BOTH operands are TRUE
+			
+			2. INCLUSIVE OR - ( | ) - FALSE if BOTH operands are FALSE
+			
+			3. EXCLUSIVE OR - ( ^ ) - TRUE only if operands are diff
 	 
 	 
 	 */
