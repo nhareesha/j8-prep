@@ -97,7 +97,7 @@ public class StaticFinalVariableNotes {
 	  	 line of declaration or instance block or constructor   */
 	
 	//public final boolean test;
-	
+	private static int test;
 	private static final int CONST_ONE;
 	private static final int CONST_TWO = 2; //assigned in line of declaration it self
 	
@@ -137,6 +137,8 @@ public class StaticFinalVariableNotes {
 		 // StaticFinalVariableNotes.CONST_ONE =2; COMPILER ERROR !!!!static final filed cannot be assigned in constructor
 		
 		 // HEIGHT = 200; COMPILER ERROR !! final filed already assigned , cannot be reassigned
+		
+		test=2;	
 	}
 	
 	

@@ -20,8 +20,6 @@ public class CastingPrimitiveValues extends Test {
 	 	 	Excluion : boolean
 	 	 	
 	 	2. When assigning larger type to smaller types casting is needed.
-	 	
-	 
 	 
 	 
 	 */
