@@ -33,7 +33,7 @@ public class ArrayListsNotes {
 		l3.add(2,"hi2");
 		l3.add(3,"hi1");
 		l3.add(4,"hi4");
-		System.out.println(l3.size()); //2 , elements gets moved accordingly
+		System.out.println("here"+l3.size()); //2 , elements gets moved accordingly
 		
 		//boolean remove(Object ele); E remove(int index);
 		//removes first matched value in the ArrayList or element at specified index
